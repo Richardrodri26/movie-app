@@ -10,7 +10,7 @@ const navItems = [
 
 export const Navbar = () => {
   return (
-    <div className='bg-blue-900 flex text-white p-5 shadow-md justify-end'>
+    <div className='bg-transparent absolute flex text-white p-5 justify-end w-full'>
       <nav className='mr-32'>
         {
           navItems.map(item => (
