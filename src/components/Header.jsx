@@ -13,10 +13,10 @@ export const Header = () => {
                 </div>
                 <div className=' w-full flex gap-5 justify-end items-center'>
                     <div>
-                        <button className='rounded-full border-blue-900 border-4 bg-blue-900'>Wacth Trailer</button >
+                        <button className='rounded-full border-blue-900 border-8 bg-blue-900'>Wacth Trailer</button >
                     </div>
                     <div>
-                        <button className='rounded-full border-green-500 border-4 bg-green-500'>Wacth Movie</button>
+                        <button className='rounded-full border-green-500 border-8 bg-green-500'>Wacth Movie</button>
                     </div>
                 </div>
             </div>
