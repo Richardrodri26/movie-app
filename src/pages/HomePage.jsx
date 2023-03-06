@@ -1,7 +1,10 @@
 import React from 'react'
+import { Header } from '../components'
 
 export const HomePage = () => {
   return (
-    <h1 className='text-red-600'>HomePage</h1>
+    <>
+    <Header/>
+    </>
   )
 }
