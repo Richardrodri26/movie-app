@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from 'react'
-import { Card } from '../components/Card'
+import React, { useEffect, useState } from "react";
+import { Card } from "../components/Card";
 import axios from "axios";
 
 export const MoviesPage = () => {
@@ -42,16 +42,17 @@ export const MoviesPage = () => {
 
   return (
     <>
-      <div className='scrollbar-hide w-auto h-96 p-8 items-center overflow-x-auto overscroll-x-auto flex space-x-6 overflow-y-auto'>
-
-        {
-          movies.map((movie) => (
-            <Card imgUrl={movie.poster_path} title={movie.original_title} popularity={movie.popularity} key={movie.id} />
-          ))
-        }
-
+      <div className="scrollbar-hide w-auto h-auto p-8 items-center overflow-x-auto overscroll-x-auto flex space-x-6 overflow-y-auto">
+        {movies.map((movie) => (
+          <Card
+            imgUrl={movie.poster_path}
+            title={movie.original_title}
+            popularity={movie.popularity}
+            key={movie.id}
+          />
+        ))}
       </div>
+      
     </>
-  )
-}
-
+  );
+};

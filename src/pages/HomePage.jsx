@@ -50,7 +50,7 @@ export const HomePage = () => {
 
   return (
     <>
-      <Header />
+      <Header/>
 
       <div className="h-screen bg-red-400">
         <div className="w-[90%] flex justify-center items-center flex-wrap gap-5 p-2">

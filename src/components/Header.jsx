@@ -3,7 +3,7 @@ import { MdVideoLibrary, MdPlayCircleFilled } from "react-icons/md";
 
 export const Header = () => {
     return (
-        <header className='h-screen bg-starwars bg-cover flex items-center justify-end'>
+        <header className={`h-screen bg-cover flex items-center justify-end bg-starwars`}>
             <div className='text-white h-full w-1/2 bg-gradient-to-r from-transparent via-black to-black p-5 flex flex-col items-end pr-40 py-20'>
                 <div className='mt-20 mb-5 w-full text-right font-bold text-4xl'>
                     Star Wars: Clone Wars

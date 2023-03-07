@@ -5,13 +5,23 @@ export const Card = ({imgUrl, title, popularity}) => {
   const url = URL_IMAGE + imgUrl
     
     return (
-        <div className='h-[400px] w-52 min-w-[220px] max-w-[208px] rounded-t-lg overflow-hidden'>
-            <img className='h-[250px] w-full rounded-t-lg bg-cover' src={url}/>
-            <div className='w-auto h-auto bg-blue-200 rounded-b-lg'>
-                <p className='text-white text-bold text-lg px-1 py-2'>{title}</p>
-                <p className='text-white text-md px-2 py-1'>{`Popularidad: ${popularity}`}</p>
-            </div>
+        <div className="flex justify-center">
+        <div className="block min-w-[132px] rounded-lg bg-slate-500">
+            <img
+              className="rounded-t-lg"
+              src={url}
+              alt=""
+            />
+          <div className="p-2  ">
+            <h5 className="mb-2 min-h-[116px] text-xl font-medium leading-tight text-neutral-800">
+              {title}
+            </h5>
+            <p className="mb-4 text-base text-neutral-600">
+              {popularity}
+            </p>
+          </div>
         </div>
+      </div>
     )
 }
 
