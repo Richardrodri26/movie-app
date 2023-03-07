@@ -46,7 +46,7 @@ export const MoviesPage = () => {
 
         {
           movies.map((movie) => (
-            <Card imgUrl={movie.poster_path} keyId={movie.id}/>
+            <Card imgUrl={movie.poster_path} key={movie.id}/>
           ))
         }
         

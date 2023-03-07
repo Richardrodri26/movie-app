@@ -1,11 +1,11 @@
 import React from 'react'
 
-export const Card = ({imgUrl, keyId}) => {
+export const Card = ({imgUrl}) => {
   const URL_IMAGE = "https://image.tmdb.org/t/p/original";
   const url = URL_IMAGE + imgUrl
     
     return (
-        <div className='h-80 w-auto' key={keyId}>
+        <div className='h-80 w-auto'>
             <img className='w-44 h-2/3 rounded-t-lg bg-cover'
                 src={url}
             />

@@ -14,7 +14,7 @@ export const Navbar = () => {
       <nav className='mr-32'>
         {
           navItems.map(item => (
-            <NavLink className='mx-3' to={item.url}>{item.title}</NavLink>
+            <NavLink className='mx-3' to={item.url} key={item.url}>{item.title}</NavLink>
           ))
         }
       </nav>
