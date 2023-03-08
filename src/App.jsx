@@ -9,7 +9,7 @@ function App() {
   return (
     <>
       <HashRouter>
-        <Navbar />
+        {/* <Navbar /> */}
 
         <Routes>
         <Route path='/' element={<HomePage/>} />

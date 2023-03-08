@@ -28,7 +28,7 @@ export const MoviesPage = () => {
         query: searchKey,
       },
     });
-    //console.log("data", results);
+    console.log("data", results);
     //setSelectedMovie(results[0])
 
     setMovies(results);
@@ -41,17 +41,17 @@ export const MoviesPage = () => {
   }, []);
 
   return (
-    <div className='bg-red-500 h-auto w-auto'>
-      <div className='scrollbar-hide w-auto h-auto p-2 items-center mt-6 overflow-x-auto overscroll-x-contain flex space-x-6 overflow-y-hidden'>
+    <>
+      <div className='scrollbar-hide w-auto h-96 p-8 items-center overflow-x-auto overscroll-x-auto flex space-x-6 overflow-y-auto'>
 
         {
           movies.map((movie) => (
-            <Card imgUrl={movie.poster_path} key={movie.id}/>
+            <Card imgUrl={movie.poster_path} title={movie.original_title} popularity={movie.popularity} key={movie.id} />
           ))
         }
-        
+
       </div>
-    </div>
+    </>
   )
 }
 
