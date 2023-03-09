@@ -1,6 +1,5 @@
 import React, { useContext, useEffect, useState } from "react";
 import { Card } from "../components/Card";
-import axios from "axios";
 import MoviesContext from "../context/movies/MoviesContext";
 
 export const MoviesPage = () => {

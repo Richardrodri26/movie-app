@@ -6,10 +6,6 @@ export const Card = () => {
   const { movies, getMovies } = useContext(MoviesContext);
   const URL_IMAGE = "https://image.tmdb.org/t/p/original";
 
-  // useEffect(() => {
-  //   getMovies();
-  // }, [])
-
   return (
     <div className="flex justify-center gap-5">
       {movies.map((movie) => (
