@@ -28,7 +28,7 @@ export const MoviesPage = () => {
         query: searchKey,
       },
     });
-    console.log("data", results);
+    //console.log("data", results);
     //setSelectedMovie(results[0])
 
     setMovies(results);
@@ -42,7 +42,7 @@ export const MoviesPage = () => {
 
   return (
     <>
-      <div className="scrollbar-hide w-auto h-auto p-8 items-center overflow-x-auto overscroll-x-auto flex space-x-6 overflow-y-auto">
+      <div className="scrollbar-hide mt-10 w-auto h-auto p-8 items-center overflow-x-auto overscroll-x-auto flex space-x-6 overflow-y-auto">
         {movies.map((movie) => (
           <Card
             imgUrl={movie.poster_path}
