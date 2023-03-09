@@ -24,10 +24,10 @@ export const HomePage = () => {
   }, []);
 
   return (
-    <>
+    <div className="bg-slate-100">
       <Header/>
 
       <MoviesPage/>
-    </>
+      </div>
   );
 };
