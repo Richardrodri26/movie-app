@@ -1,6 +1,7 @@
 import React, { useContext, useEffect, useState } from "react";
 import { Header } from "../components";
 import MoviesContext from "../context/movies/MoviesContext";
+import { MoviesPage } from "./MoviesPage";
 
 // kabap79602@maazios.com
 // Usu: appmovie23
@@ -26,22 +27,7 @@ export const HomePage = () => {
     <>
       <Header/>
 
-      <div className="h-screen bg-red-400">
-        <div className="w-[90%] flex justify-center items-center flex-wrap gap-5 p-2">
-          {
-          movies.map((movie) => (
-            <div key={movie.id} className="h-80 w-auto bg-red-900">
-              <img
-                src={`${URL_IMAGE + movie.poster_path}`}
-                alt={movie.id}
-                className='h-full w-full bg-cover'
-              />
-              <h4 className="font-bold">{movie.title}</h4>
-            </div>
-          ))
-          }
-        </div>
-      </div>
+      <MoviesPage/>
     </>
   );
 };
