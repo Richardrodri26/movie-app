@@ -12,7 +12,7 @@ import { MoviesPage } from "./MoviesPage";
 // https://api.themoviedb.org/3/discover/movie?api_key=a6e8bd7e88f8039d24bcd9c29cd51230
 
 export const HomePage = () => {
-  const {movies, getMovies} = useContext(MoviesContext)
+  const { movies, getMovies } = useContext(MoviesContext)
 
   const IMAGE_PATH = "https://image.tmdb.org/t/p/original";
 
@@ -24,10 +24,10 @@ export const HomePage = () => {
   }, []);
 
   return (
-    <div className="bg-slate-100">
-      <Header/>
+    <>
+      <Header />
 
-      <MoviesPage/>
-      </div>
+      <MoviesPage />
+    </>
   );
 };

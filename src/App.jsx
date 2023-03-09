@@ -11,15 +11,19 @@ function App() {
   return (
     <MoviesState>
       <HashRouter>
-        <Navbar />
 
-        <Routes>
-        <Route path='/' element={<HomePage/>} />
-        <Route path='/movies' element={<MoviesPage/>} />
-        <Route path='/movies/:id' element={<MoviePage/>} />
-        <Route path='/about' element={<AboutPage/>} />
+        <div className="bg-slate-100">
 
-        </Routes>
+          <Navbar />
+
+          <Routes>
+            <Route path='/' element={<HomePage />} />
+            <Route path='/movies' element={<MoviesPage />} />
+            <Route path='/movies/:id' element={<MoviePage />} />
+            <Route path='/about' element={<AboutPage />} />
+          </Routes>
+
+        </div>
 
       </HashRouter>
     </MoviesState>
