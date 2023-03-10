@@ -22,7 +22,6 @@ const MoviePage = () => {
         },
       }
     );
-    console.log(data)
     setMovie(data);
   };
 
