@@ -1,8 +1,8 @@
 import React, { useContext, useEffect, useState } from "react";
-import { Card } from "../components/Card";
+import { Card } from "./Card";
 import MoviesContext from "../context/movies/MoviesContext";
 
-export const MoviesPage = () => {
+export const Carousel = () => {
   const { movies } = useContext(MoviesContext)
 
   return (
