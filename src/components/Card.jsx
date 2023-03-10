@@ -17,12 +17,12 @@ export const Card = (props) => {
             />
           </Link>
           
-            <div className="bg-gradient-to-t from-black p-2 absolute top-1/2 left-0 z-20 opacity-0 group-hover:opacity-100 transition ease-in-out delay-150 group-hover:-translate-y-1  group-hover:duration-150">
-            <h5 className="mb-2 min-h-[90px] text-xl font-medium leading-tight text-white">
+            <div className="rounded-md w-full bg-gradient-to-t from-black p-2 absolute -bottom-1 left-0 z-20 opacity-0 group-hover:opacity-100 transition ease-in-out delay-150 group-hover:-translate-y-1  group-hover:duration-150">
+            <h5 className="mb-2 h-auto text-xl font-medium leading-tight text-white">
               {props.title}
             </h5>
             <p className="mb-4 text-base text-white">
-              {props.popularity}
+              {props.popularity}🔥
             </p>
           </div>
            
