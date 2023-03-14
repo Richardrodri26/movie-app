@@ -14,6 +14,7 @@ export const Carousel = () => {
             title={movie.original_title}
             popularity={movie.popularity}
             posterImg={movie.poster_path}
+            description={movie.overview}
             key={movie.id}
           />
         ))}
