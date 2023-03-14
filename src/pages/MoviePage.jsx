@@ -1,11 +1,13 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 
 const MoviePage = () => {
   const { id } = useParams();
+  const navigate = useNavigate();
 
   const [movie, setMovie] = useState();
+  const [size, setSize] = useState("");
 
   const API_KEY = "a6e8bd7e88f8039d24bcd9c29cd51230";
   const API_URL = "https://api.themoviedb.org/3";
@@ -25,34 +27,57 @@ const MoviePage = () => {
     setMovie(data);
   };
 
+  const onChangeSize = () => {
+    setSize(document.documentElement.clientWidth);
+  };
+
   useEffect(() => {
     fetchMovies();
+    window.addEventListener("resize", onChangeSize);
   }, []);
 
-  const mediaqueryList = window.matchMedia("(max-width: 425px)")
+  //const mediaqueryList = window.matchMedia("(max-width: 425px)")
+  const image = !(size >= 425) ? movie?.poster_path : movie?.backdrop_path;
 
-  console.log(mediaqueryList)
+  // const a = document.documentElement.clientWidth;
+  // console.log(a);
+
+  //console.log(mediaqueryList.matches)
+  //console.log(screen.width)
+
+  //console.log(movie);
 
   return (
-    <div className="">
+    <div className="bg-neutral-900 h-screen">
       <div className="relative max-h-[500px] ">
         <img
-          className="w-full cover blur-sm"
-          src={URL_IMAGE + movie?.backdrop_path}
+          className="max-h-[500px] w-full object-cover "
+          src={URL_IMAGE + image}
           alt="1"
         />
 
-        <div className="absolute top-[15%] left-10 right-10 flex justify-around items-center">
-          <div className="w-1/3 h-96 text-white flex flex-col gap-5">
-            <h3 className="font-bold text-3xl">{movie?.title}</h3>
-            <p>{movie?.overview}</p>
-          </div>
+        <span
+          onClick={() => navigate("/")}
+          className="absolute top-5 left-5  bg-white"
+        >
+          Regresar
+        </span>
 
-          <img
-            className=" max-w-[300px] w-2/3"
-            src={URL_IMAGE + movie?.poster_path}
-            alt="1"
-          />
+        <div className="w-full absolute bottom-0 left-0 p-10 flex justify-start items-center bg-gradient-to-b from-transparent via-neutral-900 to-neutral-900">
+          <div className="h-auto text-white flex flex-col gap-5">
+            <div className="flex gap-5">
+              {movie?.production_companies.map((company) => (
+                <p key={company.id}>{company.name}</p>
+              ))}
+            </div>
+            <h3 className="font-bold text-3xl">{movie?.title}</h3>
+            <div className="flex gap-5">
+              {movie?.genres.map((genre) => (
+                <p key={genre.id}>{genre.name}</p>
+              ))}
+            </div>
+            {/* <p>{movie?.overview}</p> */}
+          </div>
         </div>
       </div>
     </div>

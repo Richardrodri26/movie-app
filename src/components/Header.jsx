@@ -21,10 +21,10 @@ export const Header = () => {
                 </div>
                 <div className=' w-full flex gap-5 justify-end items-center'>
                     <div>
-                        <button className='rounded-full flex items-center gap-2 p-1 border-blue-900 border-8 bg-blue-900'>Wacth Trailer<MdVideoLibrary/></button >
+                        <button className='rounded-full flex items-center gap-2 p-1 border-blue-900 border-8 bg-blue-900'>Watch Trailer<MdVideoLibrary/></button >
                     </div>
                     <div>
-                        <button className='rounded-full flex items-center gap-2 p-1 border-green-500 border-8 bg-green-500'>Wacth Movie<MdPlayCircleFilled/></button>
+                        <button className='rounded-full flex items-center gap-2 p-1 border-green-500 border-8 bg-green-500'>Watch Movie<MdPlayCircleFilled/></button>
                     </div>
                 </div>
             </div>

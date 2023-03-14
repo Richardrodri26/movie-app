@@ -4,13 +4,13 @@ import MoviesContext from "../context/movies/MoviesContext";
 import { Carousel } from "../components/Carousel";
 
 export const HomePage = () => {
-  const {movies, getMovies} = useContext(MoviesContext)
+  const {getMovies} = useContext(MoviesContext)
   useEffect(() => {
     getMovies();
   }, []);
 
   return (
-    <div className="bg-slate-100">
+    <div className="bg-neutral-900">
       <Header/>
       <Carousel/>
     </div>

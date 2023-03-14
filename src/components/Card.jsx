@@ -17,15 +17,19 @@ export const Card = (props) => {
             alt=""
           />
 
-          <div className="rounded-md w-full h-full bg-slate-100 p-2 absolute -bottom-1 left-0 z-20 opacity-0 group-hover:opacity-100 transition ease-in-out delay-150 group-hover:-translate-y-1  group-hover:duration-150">
-            <h5 className="mb-2 h-auto text-xl font-medium leading-tight text-red-600">
+          <div className="flex flex-col justify-between rounded-md w-full h-full bg-neutral-700 p-4 absolute -bottom-1 left-0 z-20 opacity-0 group-hover:opacity-100 transition ease-in-out delay-150 group-hover:-translate-y-1  group-hover:duration-150">
+            <img 
+              className="w-full h-auto absolute top-0 left-0"
+              src={`${URL_IMAGE}${props.banner}`}
+              alt={props.title}/>
+            <h5 className="relative mb-2 h-auto text-xl font-medium leading-tight text-white">
               {props.title}
             </h5>
-            <p className="mb-4 text-base text-black font-sans text-justify">
-              {props.description.substring(0, 160) + '...'}
+            <p className="relative mb-4 text-base text-gray-300 font-sans">
+              {props.description.substring(0, 100) + '...'}
             </p>
-            <p className="mb-4 text-base text-blue-900 font-medium">
-              {props.popularity}{' '}🔥
+            <p className="relative mb-4 text-base text-red-500 font-medium">
+              {`${props.popularity} 🔥`}
             </p>
           </div>
         </div>
