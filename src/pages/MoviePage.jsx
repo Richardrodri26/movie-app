@@ -29,12 +29,32 @@ const MoviePage = () => {
     fetchMovies();
   }, []);
 
+  const mediaqueryList = window.matchMedia("(max-width: 425px)")
+
+  console.log(mediaqueryList)
+
   return (
-    <div className="mt-20">
-      <h3>{movie?.title}</h3>
-      <img src={URL_IMAGE + movie?.backdrop_path} width={500} alt="1" />
-      <img src={URL_IMAGE + movie?.poster_path} width={500} alt="1" />
-      <p>{movie?.overview}</p>
+    <div className="">
+      <div className="relative max-h-[500px] ">
+        <img
+          className="w-full cover blur-sm"
+          src={URL_IMAGE + movie?.backdrop_path}
+          alt="1"
+        />
+
+        <div className="absolute top-[15%] left-10 right-10 flex justify-around items-center">
+          <div className="w-1/3 h-96 text-white flex flex-col gap-5">
+            <h3 className="font-bold text-3xl">{movie?.title}</h3>
+            <p>{movie?.overview}</p>
+          </div>
+
+          <img
+            className=" max-w-[300px] w-2/3"
+            src={URL_IMAGE + movie?.poster_path}
+            alt="1"
+          />
+        </div>
+      </div>
     </div>
   );
 };

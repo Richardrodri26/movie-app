@@ -1,5 +1,5 @@
 import React from 'react'
-import { NavLink } from 'react-router-dom'
+import { NavLink, useLocation, useMatch } from 'react-router-dom'
 
 const navItems = [
   { url: "/", title: 'Home' },
@@ -9,6 +9,9 @@ const navItems = [
 
 
 export const Navbar = () => {
+  const isMoviesRoute = useMatch("/movies/:id");
+  
+  if(isMoviesRoute?.pattern?.path === '/movies/:id') return null;
   return (
     <div className='bg-transparent absolute top-0 flex text-white p-5 justify-end w-full'>
       <nav className='mr-32'>
