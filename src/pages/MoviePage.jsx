@@ -38,7 +38,8 @@ const MoviePage = () => {
   }, []);
 
   //const mediaqueryList = window.matchMedia("(max-width: 425px)")
-  const image = size <= 425 ? movie?.poster_path : movie?.backdrop_path;
+  // const image = size <= 425 ? movie?.poster_path : movie?.backdrop_path;
+  const image = size ? movie?.poster_path : movie?.backdrop_path;
 
   // const a = document.documentElement.clientWidth;
   // console.log(a);
@@ -46,7 +47,8 @@ const MoviePage = () => {
   //console.log(mediaqueryList.matches)
   //console.log(screen.width)
 
-  //console.log(movie);
+  
+  //console.log(movie?.genres);
 
   return (
     <div className="bg-neutral-900 h-screen">
@@ -79,25 +81,33 @@ const MoviePage = () => {
             </div>
 
             <div className="flex gap-10">
-              <div className="p-2 text-xl font-bold rounded-lg flex justify-center items-center h-20 bg-neutral-700 ">
+              <div className="py-2 px-3 text-xl font-bold rounded-lg flex justify-center items-center h-20 bg-neutral-700 ">
                 <p className="-rotate-90 h-min text-sm w-min text-gray-300 grow-0">Budget</p>
                 <p className="grow">{movie?.budget}</p>
               </div>
-              <div className="p-2 text-xl font-bold rounded-lg flex justify-center items-center h-20 bg-neutral-700 ">
+              <div className="py-2 px-3 text-xl font-bold rounded-lg flex justify-center items-center h-20 bg-neutral-700 ">
                 <p className="-rotate-90 h-min text-sm w-auto text-gray-300 grow-0">Release</p>
                 <p className="grow">{movie?.release_date}</p>
               </div>
-              <div className="p-2 text-xl font-bold rounded-lg flex justify-center items-center h-20 bg-neutral-700 ">
+              <div className="py-2 px-3 text-xl font-bold rounded-lg flex justify-center items-center h-20 bg-neutral-700 ">
                 <p className="-rotate-90 h-min text-sm w-auto text-gray-300 grow-0">status</p>
                 <p className="grow">{movie?.status}</p>
               </div>
-              <div className="p-2 text-xl font-bold rounded-lg flex justify-center items-center h-20 bg-neutral-700 ">
-                <p className="-rotate-90 h-min text-sm w-auto text-gray-300 grow-0">Length</p>
+              <div className="py-2 px-3 text-xl font-bold rounded-lg flex justify-center items-center h-20 bg-neutral-700 ">
+                <p className="-rotate-90 h-min text-sm w-auto text-gray-300 grow-0 ">Length</p>
                 <p className="grow">{`${movie?.runtime} min`}</p>
               </div>
             </div>
             {/* <p>{movie?.overview}</p> */}
           </div>
+        </div>
+      </div>
+
+      <div className="w-[95%] my-0 mx-auto text-white">
+
+        <div>
+          <p>Description</p>
+          <p>{movie?.overview}</p>
         </div>
       </div>
     </div>
