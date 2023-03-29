@@ -48,7 +48,7 @@ const MoviePage = () => {
   //console.log(screen.width)
 
   
-  //console.log(movie?.genres);
+  console.log(movie?.genres);
 
   return (
     <div className="bg-neutral-900 h-screen">
@@ -61,12 +61,12 @@ const MoviePage = () => {
 
         <button
           onClick={() => navigate("/")}
-          className=" text-white flex justify-center items-center absolute top-5 left-5 h-10 w-10 bg-neutral-900 rounded-full"
+          className=" text-white font-2xl flex justify-center items-center absolute top-5 left-5 h-10 w-10 bg-neutral-900 rounded-full"
         >
           <IoIosReturnLeft />
         </button>
 
-        <div className="w-full absolute bottom-0 left-0 p-10 flex justify-start items-center bg-gradient-to-b from-transparent via-neutral-900 to-neutral-900">
+        <div className="w-full absolute bottom-0 left-0 p-10 flex justify-start items-center bg-gradient-to-b from-transparent via-transparent to-neutral-900">
           <div className="mb-10 h-auto text-white flex flex-col gap-5">
             <div className="flex gap-5">
               {movie?.production_companies.map((company) => (
