@@ -7,7 +7,7 @@ export const Carousel = ({ movies, title }) => {
     <>
       <p className="text-xl font-bold text-white ml-10 pt-10">{title}</p>
       <div className="scrollbar-hide  w-auto h-auto p-8 items-center overflow-x-auto overscroll-x-auto flex space-x-6 overflow-y-visible transition ease-in-out delay-150 hover:duration-150">
-        {movies.map((movie) => (
+        {movies?.map((movie) => (
           <Card
             id={movie.id}
             imgUrl={movie.poster_path}

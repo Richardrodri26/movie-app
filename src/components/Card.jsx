@@ -1,10 +1,13 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 export const Card = (props) => {
   const URL_IMAGE = "https://image.tmdb.org/t/p/original";
+  const navigate = useNavigate();
 
   return (
-    <div className="flex justify-center gap-5">
+    <div className="flex justify-center gap-5"
+      onClick={() => navigate(`/movies/${props.id}`, {replace: true})}
+    >
       <Link to={`/movies/${props.id}`}>
         <div
           className="block min-w-[200px] hover:mx-5 relative z-0 group hover:shadow-lg hover:shadow-red-500 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:duration-150"
